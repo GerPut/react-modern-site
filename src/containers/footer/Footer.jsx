@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import gpt3Logo from '../../assets/logo.svg';
 import './footer.css';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Footer = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
     return (
         <div className="gpt3__footer section__padding">
-            <div className="gpt3__footer-heading">
+            <div data-aos="fade-right" className="gpt3__footer-heading">
                 <h1 className="gradient__text">Do you want to be part of the future before others?</h1>
             </div>
 
-            <button className="gpt3__footer-btn">
+            <button data-aos="flip-up" className="gpt3__footer-btn">
                 <p>Request Access</p>
             </button>
 

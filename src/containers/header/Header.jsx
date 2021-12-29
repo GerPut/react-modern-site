@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './header.css';
 import people from '../../assets/people.png'
 import ai from '../../assets/ai.png'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Header = () => {
+    useEffect(() => {
+        Aos.init({ duration: 4000 })
+    }, [])
     return (
         <div className="gpt3__header section__padding" id="home" >
             <div className="gpt3__header-content">

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Feature } from '../../components';
 import './features.css';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const featuresData = [
     {
@@ -22,9 +24,12 @@ const featuresData = [
 ]
 
 const Features = () => {
+    useEffect(() => {
+        Aos.init({ duration: 600 })
+    }, [])
     return (
         <div className="gpt3__features section__padding" id="features">
-            <div className="gpt3__features-heading">
+            <div data-aos="fade-right" className="gpt3__features-heading">
                 <h1 className="gradient__text">The Future is Now and you just need to realize it. Step into the Future Today & make it Happen.</h1>
                 <p>Request early access</p>
             </div>
